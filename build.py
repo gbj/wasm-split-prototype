@@ -20,7 +20,7 @@ build_options = [
 ]
 
 if not args.no_split:
-    build_options.extend(["--features", "split brotli gzip"])
+    build_options.extend(["--features", "split"])
 
 # First build without output redirection in order to allow errors to be
 # displayed normally

@@ -9,17 +9,20 @@ crate-type = ["cdylib"]
 
 [dependencies]
 anyhow = "1.0.82"
-async-compression = { version = "0.4.8", features = ["futures-io"] }
+console_error_panic_hook = "0.1.7"
 futures = "0.3.30"
-gloo-console = "0.3.0"
-gloo-net = { version = "0.3.1", default-features = false, features = ["http"] }
+gloo-net = "0.5.0"
 js-sys = "0.3.69"
+leptos = { path = "/Users/gjohnston/Documents/Projects/leptos-main/leptos/leptos" }        #, features = ["tracing"]}
+leptos_router = { path = "/Users/gjohnston/Documents/Projects/leptos-main/leptos/router" } # , features = ["tracing"]}
+send_wrapper = "0.6.0"
+serde = { version = "1.0.202", features = ["derive"] }
+serde_json = "1.0.117"
 wasm-bindgen = "0.2.92"
-wasm-bindgen-futures = "0.4.42"
-wasm-streams = "0.4.0"
 wasm_split = { path = "../wasm_split", optional = true }
+#tracing = "0.1"
+#tracing-subscriber = "0.3"
+#tracing-subscriber-wasm = "0.1"
 
 [features]
 split = ["dep:wasm_split"]
-gzip = ["async-compression/gzip"]
-brotli = ["async-compression/brotli"]
